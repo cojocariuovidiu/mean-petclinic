@@ -3,13 +3,20 @@ var express = require('express'),
     path = require('path'),
     cons = require('consolidate'),
     util = require('util'),
+    db = require('./lib/db'),
+    auth = require('./lib/authentication'),
+    logger = require('./lib/logger'),
+    config = require('./lib/configuration'),
+    routes = require('./lib/routes'),
+    utils = require('./lib/utils'),
     app = express();
 
 app.engine('html', cons.handlebars);
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
-app.use(express.favicon('public/img/favicon.ico'));
+//TODO: Why doesn't this work?
+//app.use(express.favicon('img/favicon.ico'));
 //app.use(express.favicon(path.join(__dirname, 'public/img/favicon.ico')));
 app.use(express.logger('dev'));
 app.use(express.json());
@@ -28,6 +35,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.home.index);
+app.get('/favicon.ico', function (req, res) {
+    res.writeHead(200, {'Content-Type': 'image/x-icon'});
+    res.end();
+});
 
 http.createServer(app).listen(app.get('port'), function () {
     logger.info('Express server listening on port ' + config.get('express:port'));

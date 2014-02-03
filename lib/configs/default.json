@@ -1,0 +1,14 @@
+{
+    "express": {
+        "port": 3000
+    },
+    "logger": {
+        "filename": "server.log",
+        "level": "warn",
+        "json": true
+    },
+    "mongo": {
+        "url": "mongodb://localhost/bol",
+        "poolSize": 4
+    }
+}

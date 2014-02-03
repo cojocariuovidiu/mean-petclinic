@@ -1,0 +1,7 @@
+{
+    "logger": {
+        "filename": "server.log",
+        "level": "info",
+        "json": false
+    }
+}

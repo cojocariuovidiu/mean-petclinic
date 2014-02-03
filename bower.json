@@ -1,0 +1,34 @@
+{
+    "name": "mychurch",
+    "version": "0.0.0",
+    "description": "MyChurch - Social Church Management Software",
+    "main": "app.js",
+    "keywords": [
+        "Node",
+        "Express",
+        "Angular",
+        "Bootstrap",
+        "HTML5",
+        "Mongo"
+    ],
+    "license": "Commercial",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "bootstrap": "~3.0.2",
+        "jquery": "~2.0.0",
+        "underscore": "~1.5.2",
+        "underscore.string": "*",
+        "text": "*",
+        "handlebars": "*"
+    },
+    "devDependencies": {
+        "requirejs": "latest"
+    }
+}

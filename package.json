@@ -1,14 +1,14 @@
 {
-    "name": "mychurch",
+    "name": "mean-petclinic",
     "version": "0.0.0",
-    "description": "MyChurch - Social Church Management Software",
+    "description": "MongoDB, ExpressJS, AngularJS, Node.js",
     "main": "app.js",
     "scripts": {
         "test": "jasmine test"
     },
     "repository": {
         "type": "git",
-        "url": "https://anri3534@bitbucket.org/tonyrichardson/mychurch.git"
+        "url": "https://github.com/anri3534/mean-petclinic.git"
     },
     "keywords": [
         "Church",

@@ -1,7 +1,7 @@
 {
-    "name": "mychurch",
+    "name": "mean-petclinic",
     "version": "0.0.0",
-    "description": "MyChurch - Social Church Management Software",
+    "description": "MongoDB, ExpressJS, AngularJS, Node.js",
     "main": "app.js",
     "keywords": [
         "Node",
@@ -26,7 +26,8 @@
         "underscore": "~1.5.2",
         "underscore.string": "*",
         "text": "*",
-        "handlebars": "*"
+        "handlebars": "*",
+        "angular": "*"
     },
     "devDependencies": {
         "requirejs": "latest"

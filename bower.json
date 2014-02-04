@@ -11,7 +11,7 @@
         "HTML5",
         "Mongo"
     ],
-    "license": "Commercial",
+    "license": "MIT",
     "private": true,
     "ignore": [
         "**/.*",

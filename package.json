@@ -15,7 +15,7 @@
         "Management"
     ],
     "author": "Tony Richardson",
-    "license": "Commercial",
+    "license": "MIT",
     "dependencies": {
         "express": "3.4.4",
         "consolidate": "~0.10.0",

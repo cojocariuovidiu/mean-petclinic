@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="PetClinic">
 <head>
     <title>MEAN Pet Clinic</title>
     <meta charset="utf-8">
@@ -8,16 +8,25 @@
     <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap-theme.css">
     <link rel="stylesheet" href="/css/petclinic.css">
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
 <div class="container">
-    Hello world
+    <div id="header"></div>
+    <div id="body">
+        <div ng-view></div>
+    </div>
+    <div id="footer"></div>
 </div>
 
+<!--
 <script src="/components/requirejs/require.js" data-main="/js/main"></script>
+-->
 <script src="/components/jquery/jquery.js"></script>
+<script src="/components/angular/angular.js"></script>
+<script src="/components/angular-route/angular-route.js"></script>
 <script src="/components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/js/router.js"></script>
 </body>
 </html>

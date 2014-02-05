@@ -27,7 +27,8 @@
         "underscore.string": "*",
         "text": "*",
         "handlebars": "*",
-        "angular": "*"
+        "angular": "*",
+        "angular-route": "*"
     },
     "devDependencies": {
         "requirejs": "latest"

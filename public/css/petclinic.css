@@ -1,6 +1,7 @@
 #header {
-    background: url('../img/banner-graphic.png') no-repeat left center;
-    min-height: 70px;
+}
+#header > div > div{
+    margin-top: 5px;
 }
 
 #body {
@@ -8,6 +9,4 @@
 }
 
 #footer {
-    background: url('../img/springsource-logo.png') no-repeat left center;
-    min-height: 10px;
 }

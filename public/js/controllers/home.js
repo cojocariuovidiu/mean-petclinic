@@ -1,2 +1,5 @@
-PetClinic.controller('home', function ($scope) {
+'use strict';
+
+petClinic.controller('home', function ($scope) {
+
 });

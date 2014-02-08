@@ -1,0 +1,11 @@
+<div ng-controller="owners">
+    <h2>Find Owners</h2>
+
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label class="sr-only" for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name" value="{{lastName}}">
+        </div>
+        <button type="button" class="btn btn-default" ng-click="findByLastName()">Find Owner</button>
+    </form>
+</div>

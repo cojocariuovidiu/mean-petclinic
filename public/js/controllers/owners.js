@@ -1,7 +1,11 @@
 var petClinic = petClinic || {};
 
-petClinic.controller('owners', function ($scope, ownerService) {
+petClinic.controller('owners', function ($scope, $log, ownerService) {
     'use strict';
+
+    $scope.createSuccess = false;
+    $scope.createFailure = false;
+    $scope.createFailureMsg = null;
 
     $scope.search = function (owner, searchForm) {
         if (searchForm.$valid) {
@@ -17,9 +21,22 @@ petClinic.controller('owners', function ($scope, ownerService) {
         }
     };
 
-    $scope.create = function (owner, createForm) {
-        if (createForm.$valid) {
-            console.log('create... ' + JSON.stringify(owner));
+    $scope.create = function (owner, ownerForm) {
+        $scope.createSuccess = false;
+        $scope.createFailure = false;
+        $scope.createFailureMsg = null;
+
+        if (ownerForm.$valid) {
+            ownerService.create(owner, function (err, _owner) {
+                if (err) {
+                    $scope.createFailureMsg = err.message;
+                    $scope.createFailure = true;
+                } else {
+                    $scope.createSuccess = true;
+                    ownerForm.$setPristine(true);
+                    $scope.owner = {};
+                }
+            });
         }
     };
 });

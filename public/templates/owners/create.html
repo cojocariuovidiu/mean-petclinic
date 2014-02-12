@@ -1,5 +1,13 @@
 <div ng-controller="owners">
     <h2>New Owner</h2>
+
+    <p class="text-success" ng-show="createSuccess">
+        New owner saved successfully.
+    </p>
+    <p class="text-danger" ng-show="createFailure">
+        <span ng-hide="createFailureMsg">Error occurred creating owner. Please try again later</span><span ngshow="createFailureMsg">{{createFailureMsg}}.</span>
+    </p>
+
     <form name="ownerForm" role="form">
         <div class="form-group">
             <label for="firstName">First Name</label>

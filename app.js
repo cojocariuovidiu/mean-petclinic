@@ -20,7 +20,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser('your secret here'));
 app.use(express.session());
-app.use(express.csrf());
+//app.use(express.csrf());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 if ('development' === app.get('env')) {
@@ -30,7 +30,7 @@ if ('development' === app.get('env')) {
 app.get('/', routes.home.index);
 
 app.get('/owner/search/:term/:context', routes.owner.search);
-//app.post('/owner', routes.owner.create);
+app.post('/owner', routes.owner.create);
 //app.put('/owner/:id', routs.owner.update);
 //app.delete('/owner/:id', routes.owner.remove);
 

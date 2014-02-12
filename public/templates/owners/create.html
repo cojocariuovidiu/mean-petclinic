@@ -1,0 +1,26 @@
+<div ng-controller="owners">
+    <h2>New Owner</h2>
+    <form name="ownerForm" role="form">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter first name" ng-model="owner.firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter last name" ng-model="owner.lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter address" ng-model="owner.address" required>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter city" ng-model="owner.city" required>
+        </div>
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="phone" class="form-control" id="telephone" placeholder="Enter phone" ng-model="owner.telephone" required>
+        </div>
+        <button type="submit" ng-disabled="ownerForm.$invalid" class="btn btn-default" ng-click="create(owner, ownerForm)">Add Owner</button>
+    </form>
+</div>

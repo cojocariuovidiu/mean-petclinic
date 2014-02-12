@@ -1,5 +1,5 @@
 var winston = require('winston'),
-    config = require('../configuration');
+    config = require('../config');
 
 function Logger() {
     return new winston.Logger({

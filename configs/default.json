@@ -8,7 +8,7 @@
         "json": true
     },
     "mongo": {
-        "url": "mongodb://localhost/bol",
+        "url": "mongodb://localhost/petclinic",
         "poolSize": 4
     }
 }

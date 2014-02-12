@@ -1,3 +1,5 @@
+'use strict';
+
 var logger = require('../logger'),
     owner = require('../services').owner;
 
@@ -17,8 +19,17 @@ exports.update = function (req, res) {
 
 exports.remove = function (req, res) {
     res.send(200);
-}
+};
 
 exports.search = function (req, res) {
-    res.send(200);
+    var term = req.params.term,
+        context = req.params.context,
+        query = {};
+    query[term.toString()] = context;
+    owner.findWhere(query, function (err, owners) {
+        if (err) {
+            return res.json(500, err);
+        }
+        return res.json(owners);
+    });
 }

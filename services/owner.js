@@ -26,11 +26,11 @@ Owner.prototype = (function () {
         },
 
         findWhere = function (query, callback) {
-            OwnerSchema.find(query, function (error, owner) {
+            OwnerSchema.find(query, function (error, owners) {
                 if (error) {
                     return callback(error, null);
                 }
-                return callback(null, owner);
+                return callback(null, owners);
             });
         },
 
@@ -46,6 +46,7 @@ Owner.prototype = (function () {
                 if (_owner != null) {
                     return callback({message: 'Owner already exits'}, null);
                 }
+
                 owner.save(function (error, o) {
                     if (error) {
                         return callback(error, null);

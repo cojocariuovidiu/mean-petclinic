@@ -13,8 +13,14 @@ exports.create = function (req, res) {
     });
 };
 
-exports.update = function (req, res) {
-    res.send(200);
+exports.details = function (req, res) {
+    var id = req.params.id;
+    owner.find(id, function (err, owner) {
+        if (err) {
+            return res.json(500, err);
+        }
+        return res.json(owner);
+    });
 };
 
 exports.remove = function (req, res) {
@@ -32,4 +38,8 @@ exports.search = function (req, res) {
         }
         return res.json(owners);
     });
-}
+};
+
+exports.update = function (req, res) {
+    res.send(200);
+};

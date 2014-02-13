@@ -1,0 +1,28 @@
+<div ng-controller="ownerDetails">
+    <h2>Owner Information</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <td><strong>{{owner.firstName}} {{owner.lastName}}</strong></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{owner.address}}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{owner.city}}</td>
+        </tr>
+        <tr>
+            <th>Telephone</th>
+            <td>{{owner.telephone}}</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-primary">Edit Owner</button></td>
+            <td><button type="button" class="btn btn-success">Add New Pet</button></td>
+        </tr>
+    </table>
+
+    <h2>Pets and Visits</h2>
+    <hr/>
+</div>

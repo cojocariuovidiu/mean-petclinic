@@ -2,15 +2,14 @@
 
 var petClinic = petClinic || {};
 
-petClinic.factory('ownerService', function ($http) {
-    var owners = [];
+petClinic.factory('ownerService', function ($http, cacheService) {
 
     return {
         search: function (search, callback) {
             var url = '/owner/search/' + search.term + '/' + search.context;
             $http({method: 'GET', url: url})
                 .success(function (data, status, headers, config) {
-                    owners = data;
+                    cacheService.put('owners', data);
                     callback(null, data);
                 })
                 .error(function (err, status, headers, config) {
@@ -26,8 +25,17 @@ petClinic.factory('ownerService', function ($http) {
                     callback(err, null);
                 });
         },
+        find: function (id, callback) {
+            $http({method: 'GET', url: '/owner/' + id})
+                .success(function (data, status, headers, config) {
+                    callback(null, data);
+                })
+                .error(function (err, status, headers, config) {
+                    callback(err, null);
+                });
+        },
         getOwners: function () {
-            return owners;
+            return cacheService.get('owners');
         }
     };
 });

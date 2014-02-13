@@ -23,12 +23,14 @@ app.use(express.session());
 //app.use(express.csrf());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.errorHandler({ showStack: true, dumpExceptions: true }));
 if ('development' === app.get('env')) {
     app.use(express.errorHandler());
 }
 
 app.get('/', routes.home.index);
 
+app.get('/owner/:id', routes.owner.details);
 app.get('/owner/search/:term/:context', routes.owner.search);
 app.post('/owner', routes.owner.create);
 //app.put('/owner/:id', routs.owner.update);
@@ -36,4 +38,8 @@ app.post('/owner', routes.owner.create);
 
 http.createServer(app).listen(app.get('port'), function () {
     logger.info('Express server listening on port ' + config.get('express:port'));
+});
+
+process.on("uncaughtException", function(err) {
+    exceptionDebug("uncaughtException : %s", err);
 });

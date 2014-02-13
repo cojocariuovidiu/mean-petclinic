@@ -3,7 +3,6 @@
 var petClinic = petClinic || {};
 
 petClinic.factory('ownerService', function ($http, cacheService) {
-
     return {
         search: function (search, callback) {
             var url = '/owner/search/' + search.term + '/' + search.context;

@@ -3,8 +3,6 @@
 var petClinic = petClinic || {};
 
 petClinic.factory('cacheService', function ($cacheFactory) {
-
-    console.log('new cache...');
     var cache = $cacheFactory('petclinic');
 
     return {

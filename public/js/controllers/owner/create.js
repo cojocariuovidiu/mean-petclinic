@@ -1,26 +1,11 @@
 var petClinic = petClinic || {};
 
-petClinic.controller('owners', function ($scope, $location, ownerService) {
+petClinic.controller('ownerCreate', function ($scope, ownerService) {
     'use strict';
 
     $scope.createSuccess = false;
     $scope.createFailure = false;
     $scope.createFailureMsg = null;
-    $scope.searchFailure = false;
-    $scope.owners = ownerService.getOwners();
-
-    $scope.search = function (owner, searchForm) {
-        $scope.searchFailure = false;
-        if (searchForm.$valid) {
-            ownerService.search({term: 'lastName', context: owner.lastName}, function (err, owners) {
-                if (err) {
-                    $scope.searchFailure = true;
-                } else {
-                    $location.url('/owners');
-                }
-            });
-        }
-    };
 
     $scope.create = function (owner, ownerForm) {
         $scope.createSuccess = false;

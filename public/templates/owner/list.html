@@ -1,4 +1,4 @@
-<div ng-controller="owners">
+<div ng-controller="ownerSearch">
     <h2>Owners</h2>
 
     <table class="table table-striped">
@@ -14,7 +14,7 @@
 
         <tbody>
             <tr ng-repeat="owner in owners">
-                <td><a href="#/owners/details/{{owner._id}}">{{owner.firstName}} {{owner.lastName}}</a></td>
+                <td><a href="#/owner/details/{{owner._id}}">{{owner.firstName}} {{owner.lastName}}</a></td>
                 <td>{{owner.address}}</td>
                 <td>{{owner.city}}</td>
                 <td>{{owner.telephone}}</td>

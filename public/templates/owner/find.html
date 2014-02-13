@@ -1,4 +1,4 @@
-<div ng-controller="owners">
+<div ng-controller="ownerSearch">
     <h2>Find Owners</h2>
 
     <p class="text-danger" ng-show="searchFailure">
@@ -13,5 +13,5 @@
         <button type="submit" ng-disabled="searchForm.$invalid" class="btn btn-default" ng-click="search(owner, searchForm)">Find Owner</button>
     </form>
 
-    <a class="create-owner" href="#/owners/create">Add Owner</a>
+    <a class="create-owner" href="#/owner/create">Add Owner</a>
 </div>

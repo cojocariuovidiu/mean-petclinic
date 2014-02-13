@@ -33,9 +33,6 @@ petClinic.factory('ownerService', function ($http, cacheService) {
                 .error(function (err, status, headers, config) {
                     callback(err, null);
                 });
-        },
-        getOwners: function () {
-            return cacheService.get('owners');
         }
     };
 });

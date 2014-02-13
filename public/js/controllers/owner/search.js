@@ -1,8 +1,8 @@
+'use strict';
+
 var petClinic = petClinic || {};
 
 petClinic.controller('ownerSearch', function ($scope, $location, cacheService, ownerService) {
-    'use strict';
-
     $scope.searchFailure = false;
     $scope.owners = cacheService.get('owners');
 

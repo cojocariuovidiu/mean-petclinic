@@ -1,8 +1,8 @@
+'use strict';
+
 var petClinic = petClinic || {};
 
 petClinic.controller('ownerCreate', function ($scope, ownerService) {
-    'use strict';
-
     $scope.createSuccess = false;
     $scope.createFailure = false;
     $scope.createFailureMsg = null;

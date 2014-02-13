@@ -1,5 +1,4 @@
 var petClinic = angular.module('petClinic', ['ngRoute', 'ngResource'])
-
     .config(function ($routeProvider) {
         'use strict';
 

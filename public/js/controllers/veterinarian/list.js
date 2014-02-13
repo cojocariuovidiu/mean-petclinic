@@ -18,7 +18,7 @@ petClinic.controller('vetList', function ($scope, vetService) {
 
     $scope.search = function (searchTerm) {
         $scope.searchTerm = searchTerm;
-    }
+    };
 
     $scope.sortByName = function () {
         if ($scope.sortOrder === 'lastName') {

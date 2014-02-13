@@ -21,15 +21,15 @@
         "tests"
     ],
     "dependencies": {
-        "bootstrap": "~3.0.2",
-        "jquery": "~2.0.0",
-        "underscore": "~1.5.2",
-        "underscore.string": "*",
-        "text": "*",
-        "handlebars": "*",
-        "angular": "~1.2.11",
-        "angular-route": "~1.2.11",
-        "angular-resource": "~1.2.11"
+        "bootstrap": "3.0.2",
+        "jquery": "2.0.0",
+        "underscore": "1.5.2",
+        "underscore.string": "2.3.3",
+        "text": "2.0.10",
+        "handlebars": "1.3.0",
+        "angular": "1.2.11",
+        "angular-route": "1.2.11",
+        "font-awesome": "4.0.3"
     },
     "devDependencies": {
         "requirejs": "latest"

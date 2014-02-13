@@ -4,7 +4,7 @@ var petClinic = angular.module('petClinic', ['ngRoute', 'ngResource'])
         'use strict';
 
         $routeProvider
-            .when('/', {templateUrl: 'templates/home.html', controller: 'home'})
+            .when('/', {templateUrl: 'templates/home.html'})
             .when('/owner/list', {templateUrl: 'templates/owner/list.html', controller: 'ownerSearch'})
             .when('/owner/find', {templateUrl: 'templates/owner/find.html', controller: 'ownerSearch'})
             .when('/owner/create', {templateUrl: 'templates/owner/create.html', controller: 'ownerCreate'})

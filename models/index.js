@@ -1,21 +1,23 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
-    username: String,
-    email: String,
-    password: String
-});
-
 var OwnerSchema = new Schema({
     firstName: String,
     lastName: String,
     address: String,
-    city:  String,
+    city: String,
     telephone: String
 });
 
-mongoose.model('User', UserSchema);
+var VetSchema = new Schema({
+    firstName: String,
+    lastName: String,
+    specialties: [
+        {name: String}
+    ]
+});
+
 mongoose.model('Owner', OwnerSchema);
+mongoose.model('Vet', VetSchema);
 
 module.exports = mongoose;

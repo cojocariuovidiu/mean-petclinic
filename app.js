@@ -36,6 +36,8 @@ app.post('/owner', routes.owner.create);
 //app.put('/owner/:id', routs.owner.update);
 //app.delete('/owner/:id', routes.owner.remove);
 
+app.get('/vet/list', routes.vet.list);
+
 http.createServer(app).listen(app.get('port'), function () {
     logger.info('Express server listening on port ' + config.get('express:port'));
 });

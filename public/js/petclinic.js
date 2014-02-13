@@ -9,6 +9,6 @@ var petClinic = angular.module('petClinic', ['ngRoute', 'ngResource'])
             .when('/owner/find', {templateUrl: 'templates/owner/find.html', controller: 'ownerSearch'})
             .when('/owner/create', {templateUrl: 'templates/owner/create.html', controller: 'ownerCreate'})
             .when('/owner/details/:id', {templateUrl: 'templates/owner/details.html', controller: 'ownerDetails'})
-            .when('/veterinarian/list', {templateUrl: 'templates/veterinarian/list.html', controller: 'veterinarians'})
+            .when('/veterinarian/list', {templateUrl: 'templates/veterinarian/list.html', controller: 'vetList'})
             .otherwise({redirectTo: '/'});
     });

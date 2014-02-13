@@ -6,7 +6,7 @@ petClinic.controller('vetList', function ($scope, vetService) {
     vetService.findAll(function (err, vets) {
         $scope.listFalure = false;
         if (err) {
-            $scope.listFalure = false;
+            $scope.listFalure = true;
         } else {
             $scope.vets = vets;
         }

@@ -20,19 +20,11 @@ petClinic.controller('vetList', function ($scope, vetService) {
         $scope.searchTerm = searchTerm;
     };
 
-    $scope.sortByName = function () {
-        if ($scope.sortOrder === 'lastName') {
-            $scope.sortOrder = '-lastName';
+    $scope.sort = function (sortBy) {
+        if ($scope.sortOrder === sortBy) {
+            $scope.sortOrder = '-' + sortBy;
         } else {
-            $scope.sortOrder = 'lastName';
+            $scope.sortOrder = sortBy;
         }
-    };
-
-    $scope.sortBySpecialty = function () {
-        if ($scope.sortOrder === 'specialty.name') {
-            $scope.sortOrder = '-specialty.name';
-        } else {
-            $scope.sortOrder = 'specialty.name';
-        }
-    };
+    }
 });

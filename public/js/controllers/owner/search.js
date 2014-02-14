@@ -26,5 +26,5 @@ petClinic.controller('ownerSearch', function ($scope, $location, cacheService, o
         } else {
             $scope.sortOrder = sortBy;
         }
-    }
+    };
 });

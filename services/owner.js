@@ -16,6 +16,15 @@ Owner.prototype = (function () {
             });
         },
 
+        findAll = function (callback) {
+            OwnerSchema.find(function (error, owners) {
+                if (error) {
+                    return callback(error, null);
+                }
+                return callback(null, owners);
+            });
+        },
+
         findOneWhere = function (query, callback) {
             OwnerSchema.findOne(query, function (error, owner) {
                 if (error) {
@@ -59,6 +68,7 @@ Owner.prototype = (function () {
     return {
         "create": create,
         "find": find,
+        "findAll": findAll,
         "findOneWhere": findOneWhere,
         "findWhere": findWhere
     };

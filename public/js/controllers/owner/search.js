@@ -7,13 +7,24 @@ petClinic.controller('ownerSearch', function ($scope, $location, cacheService, o
     $scope.sortOrder = '-lastName';
     $scope.owners = cacheService.get('owners');
 
-    $scope.search = function (owner, searchForm) {
+    $scope.search = function (owner) {
         $scope.searchFailure = false;
-        if (searchForm.$valid) {
-            ownerService.search({term: 'lastName', context: owner.lastName}, function (err) {
+
+        if (owner === undefined) {
+            ownerService.findAll(function (err, owners) {
                 if (err) {
                     $scope.searchFailure = true;
                 } else {
+                    cacheService.put('owners', owners);
+                    $location.url('/owner/list');
+                }
+            });
+        } else {
+            ownerService.search({term: 'lastName', context: owner.lastName}, function (err, owners) {
+                if (err) {
+                    $scope.searchFailure = true;
+                } else {
+                    cacheService.put('owners', owners);
                     $location.url('/owner/list');
                 }
             });

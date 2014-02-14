@@ -23,6 +23,15 @@ exports.details = function (req, res) {
     });
 };
 
+exports.list = function (req, res) {
+    owner.findAll(function (err, owners) {
+        if (err) {
+            return res.json(500, err);
+        }
+        return res.json(owners);
+    });
+};
+
 exports.remove = function (req, res) {
     res.send(200);
 };

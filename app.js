@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express'),
     http = require('http'),
     path = require('path'),
@@ -32,6 +34,7 @@ app.get('/', routes.home.index);
 
 app.get('/owner/:id', routes.owner.details);
 app.get('/owner/search/:term/:context', routes.owner.search);
+app.get('/owners', routes.owner.list);
 app.post('/owner', routes.owner.create);
 //app.put('/owner/:id', routs.owner.update);
 //app.delete('/owner/:id', routes.owner.remove);
@@ -42,6 +45,6 @@ http.createServer(app).listen(app.get('port'), function () {
     logger.info('Express server listening on port ' + config.get('express:port'));
 });
 
-process.on("uncaughtException", function(err) {
-    exceptionDebug("uncaughtException : %s", err);
+process.on("uncaughtException", function (err) {
+    logger.error(JSON.stringify(err));
 });

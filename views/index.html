@@ -12,57 +12,53 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body ng-cloak>
-
-<div class="container">
-    <div class="row" id="header">
-        <div class="col-md-6">
-            <div class="banner">
-                <span class="title">Pet Clinic</span> <span class="demo">A MEAN Stack Demonstration</span>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Pet Clinic</a>
             </div>
-            <div class="navbar navbar-default" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li class="active">
-                                <a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
-                            </li>
-                            <li>
-                                <a href="#/owner/find"><span class="glyphicon glyphicon-search"></span> Find Owners</a>
-                            </li>
-                            <li>
-                                <a href="#/veterinarian/list"><span class="glyphicon glyphicon-th-list"></span> Veterinarians</a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> Error</a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
+                    <li>
+                        <a href="#/owner/find"><span class="glyphicon glyphicon-search"></span> Find Owners</a>
+                    </li>
+                    <li>
+                        <a href="#/veterinarian/list"><span class="glyphicon glyphicon-th-list"></span> Veterinarians</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> Error</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a>
+                    </li>
+                </ul>
+                <ul class="visible-md visible-lg nav navbar-nav navbar-right">
+                    <li class="navbar-text">A MEAN Stack Demonstration<li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <div id="body" class="row">
-        <div class="col-md-6" ng-view></div>
+    <div class="container">
+        <div id="body" class="row">
+            <div class="col-md-8" ng-view></div>
+        </div>
     </div>
 
-    <div id="footer" class="row">
-        <div class="col-md-6">
+    <div id="footer">
+        <div class="pull-right">
             <i class="fa fa-cogs fa-3"></i>  Powered by MEAN
         </div>
     </div>
-</div>
 
 <!--
 <script src="/components/requirejs/require.js" data-main="/js/main"></script>

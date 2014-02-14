@@ -1,26 +1,25 @@
-#header {
+html {
+    position: relative;
+    min-height: 100%;
 }
-#header > div > div{
-    margin-top: 5px;
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
-
-#body {
-    min-height: 200px;
-}
-
 #footer {
-    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+    background-color: #557810;
+    color: white;
+    font-style: italic;
 }
 
 #footer > div {
-    background-color: #557810;
-    color: white;
-    min-height: 50px;
-    line-height: 50px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    font-style: italic;
+    margin-right: 30px;
 }
 
 form {
@@ -49,19 +48,23 @@ input.ng-invalid.ng-dirty {
     font-style: italic;
 }
 
-.banner span {
-    margin-left: 20px;
+/* TODO: Generate Bootstrap theme. */
+.navbar-default {
+    background: none #557810 no-repeat;
 }
-
-.banner span.title {
-    font-size: 28px;
+.navbar-default .navbar-brand {
     color: #fff;
 }
-
-.banner span.demo {
-    color: #9BD143;
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #fff;
 }
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+}
+.navbar-default .navbar-text {
+    color: #9BD143;
+    font-style: italic;
 }

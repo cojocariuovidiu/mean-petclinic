@@ -40,7 +40,7 @@ exports.search = function (req, res) {
     var term = req.params.term,
         context = req.params.context,
         query = {};
-    query[term.toString()] = context;
+    query[term.toString()] = { $regex: context, $options: 'i' };
     owner.findWhere(query, function (err, owners) {
         if (err) {
             return res.json(500, err);

@@ -20,6 +20,7 @@
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
+    font-style: italic;
 }
 
 form {
@@ -45,6 +46,7 @@ input.ng-invalid.ng-dirty {
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
+    font-style: italic;
 }
 
 .banner span {

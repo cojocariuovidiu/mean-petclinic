@@ -36,7 +36,7 @@ app.get('/owner/:id', routes.owner.details);
 app.get('/owner/search/:term/:context', routes.owner.search);
 app.get('/owners', routes.owner.list);
 app.post('/owner', routes.owner.create);
-//app.put('/owner/:id', routs.owner.update);
+app.put('/owner/:id', routes.owner.update);
 //app.delete('/owner/:id', routes.owner.remove);
 
 app.get('/vet/list', routes.vet.list);

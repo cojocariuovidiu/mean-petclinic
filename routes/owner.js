@@ -50,5 +50,11 @@ exports.search = function (req, res) {
 };
 
 exports.update = function (req, res) {
-    res.send(200);
+    var data = req.body;
+    owner.update(data, function (err) {
+        if (err) {
+            return res.json(500, err);
+        }
+        return res.send(201);
+    });
 };

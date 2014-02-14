@@ -4,16 +4,6 @@ var petClinic = petClinic || {};
 
 petClinic.factory('ownerService', function ($http) {
     return {
-        search: function (search, callback) {
-            var url = '/owner/search/' + search.term + '/' + search.context;
-            $http({method: 'GET', url: url})
-                .success(function (data, status, headers, config) {
-                    callback(null, data);
-                })
-                .error(function (err, status, headers, config) {
-                    callback(err, null);
-                });
-        },
         create: function (owner, callback) {
             $http({method: 'POST', url: '/owner', data: owner})
                 .success(function (data, status, headers, config) {
@@ -36,6 +26,25 @@ petClinic.factory('ownerService', function ($http) {
             $http({method: 'GET', url: '/owners'})
                 .success(function (data, status, headers, config) {
                     callback(null, data);
+                })
+                .error(function (err, status, headers, config) {
+                    callback(err, null);
+                });
+        },
+        search: function (search, callback) {
+            var url = '/owner/search/' + search.term + '/' + search.context;
+            $http({method: 'GET', url: url})
+                .success(function (data, status, headers, config) {
+                    callback(null, data);
+                })
+                .error(function (err, status, headers, config) {
+                    callback(err, null);
+                });
+        },
+        update: function (owner, callback) {
+            $http({method: 'PUT', url: '/owner/' + owner._id, data: owner})
+                .success(function (data, status, headers, config) {
+                    callback(null, null);
                 })
                 .error(function (err, status, headers, config) {
                     callback(err, null);

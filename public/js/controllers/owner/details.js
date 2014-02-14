@@ -10,4 +10,8 @@ petClinic.controller('ownerDetails', function ($scope, $location, $routeParams, 
             $scope.owner = owner;
         }
     });
+
+    $scope.edit = function (owner) {
+        $location.url('/owner/update/' + owner._id);
+    };
 });

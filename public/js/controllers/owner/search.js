@@ -4,6 +4,7 @@ var petClinic = petClinic || {};
 
 petClinic.controller('ownerSearch', function ($scope, $location, cacheService, ownerService) {
     $scope.searchFailure = false;
+    $scope.sortOrder = '-lastName';
     $scope.owners = cacheService.get('owners');
 
     $scope.search = function (owner, searchForm) {
@@ -18,4 +19,12 @@ petClinic.controller('ownerSearch', function ($scope, $location, cacheService, o
             });
         }
     };
+
+    $scope.sort = function (sortBy) {
+        if ($scope.sortOrder === sortBy) {
+            $scope.sortOrder = '-' + sortBy;
+        } else {
+            $scope.sortOrder = sortBy;
+        }
+    }
 });

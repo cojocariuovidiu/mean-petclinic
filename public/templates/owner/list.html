@@ -4,16 +4,16 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>Telephone</th>
+                <th class="sortable" ng-click="sort('lastName')">Name <i class="fa fa-sort"></th>
+                <th class="sortable" ng-click="sort('address')">Address <i class="fa fa-sort"></i></th>
+                <th class="sortable" ng-click="sort('city')">City <i class="fa fa-sort"></i></th>
+                <th class="sortable" ng-click="sort('telephone')">Telephone <i class="fa fa-sort"></i></th>
                 <th>Pets</th>
             </tr>
         </thead>
 
         <tbody>
-            <tr ng-repeat="owner in owners">
+            <tr ng-repeat="owner in owners | orderBy:sortOrder">
                 <td><a href="#/owner/details/{{owner._id}}">{{owner.firstName}} {{owner.lastName}}</a></td>
                 <td>{{owner.address}}</td>
                 <td>{{owner.city}}</td>

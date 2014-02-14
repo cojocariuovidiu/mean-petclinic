@@ -9,6 +9,17 @@
 }
 
 #footer {
+    margin-top: 30px;
+}
+
+#footer > div {
+    background-color: #557810;
+    color: white;
+    min-height: 50px;
+    line-height: 50px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
 }
 
 form {
@@ -25,6 +36,28 @@ input.ng-invalid.ng-dirty {
 
 .sortable {
     cursor: pointer;
+}
+
+.banner {
+    background-color: #557810;
+    min-height: 50px;
+    line-height: 50px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.banner span {
+    margin-left: 20px;
+}
+
+.banner span.title {
+    font-size: 28px;
+    color: #fff;
+}
+
+.banner span.demo {
+    color: #9BD143;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {

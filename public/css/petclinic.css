@@ -13,7 +13,7 @@ body {
     /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px;
-    background-color: #557810;
+    background-color: #2c3e50;
     color: white;
     font-style: italic;
 }
@@ -36,35 +36,4 @@ input.ng-invalid.ng-dirty {
 
 .sortable {
     cursor: pointer;
-}
-
-.banner {
-    background-color: #557810;
-    min-height: 50px;
-    line-height: 50px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    font-style: italic;
-}
-
-/* TODO: Generate Bootstrap theme. */
-.navbar-default {
-    background: none #557810 no-repeat;
-}
-.navbar-default .navbar-brand {
-    color: #fff;
-}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #fff;
-}
-.navbar-default .navbar-nav > li > a {
-    color: #fff;
-}
-.navbar-default .navbar-nav > li > a:hover {
-    color: #fff;
-}
-.navbar-default .navbar-text {
-    color: #9BD143;
-    font-style: italic;
 }

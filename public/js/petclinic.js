@@ -1,4 +1,4 @@
-var petClinic = angular.module('petClinic', ['ngRoute', 'ngResource'])
+var petClinic = angular.module('petClinic', ['ngRoute'])
     .config(function ($routeProvider) {
         'use strict';
 
